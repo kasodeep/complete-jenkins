@@ -40,3 +40,9 @@
 1. A simple job to print the outputs of echo into a file.
 2. The file gets created in the .jenkins/workspace folder.
 3. We can Schedule the jobs & also add the parameters.
+
+### Git Demo:
+
+1. We can use git source to handle the job.
+2. Using Poll SCM, it will fetch the changes by checking every time frame and will trigger the job.
+3. It will not trigger unless the changes are present.
