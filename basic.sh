@@ -1,0 +1,1 @@
+echo "This is from script basic.sh"
