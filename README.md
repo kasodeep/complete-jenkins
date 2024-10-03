@@ -46,3 +46,13 @@
 1. We can use git source to handle the job.
 2. Using Poll SCM, it will fetch the changes by checking every time frame and will trigger the job.
 3. It will not trigger unless the changes are present.
+
+### For Sending Email:
+
+1. Go to system config and add the gmail's smtp server.
+2. Then, add app password from google account and enable it.
+
+### Post Build Action:
+
+1. We can use post build action to send email when the build is completed.
+2. We need to specify the email address where we want to send the email.
