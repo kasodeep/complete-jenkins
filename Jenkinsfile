@@ -1,3 +1,4 @@
+// Declrative Pipeline.
 pipeline {
    agent any
 
@@ -59,3 +60,37 @@ pipeline {
       }
    }
 }
+
+pipeline {
+    agent any
+    
+    environment {
+        NAME="Deep"
+        AGE=20
+        PASS=credentials('PASSWORD')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                bat '''
+                echo Hello
+                echo %PASS%
+                '''
+                // Retries only on failure.
+                retry(3) {
+                    bat 'echo Trying...'
+                }
+            }
+        }
+        
+        stage('Testing') {
+            steps {
+                timeout(time: 5, unit: 'SECONDS') {
+                    
+                }
+            }
+        }
+    }
+}
+

@@ -56,3 +56,22 @@
 
 1. We can use post build action to send email when the build is completed.
 2. We need to specify the email address where we want to send the email.
+
+### Pipeline Docs:
+
+1. `Scripted` and `Declarative` are the two ways to write Jenkins pipeline.
+2. Two major ways are `Classic UI` and `SCM Jenkinsfile`.
+3. `agent` instructs Jenkins to allocate an `executor` and `workspace` for the entire Pipeline.
+4. We can also use the environment variables to provide the `credentials`.
+5. We can use parallelism to parallelize the execution of the pipeline.
+
+### Key Features:
+
+- Key Pipeline Directives
+- `agent`: Defines where the pipeline runs (e.g., Docker, node).
+- `environment`: Sets environment variables.
+- `options`: Set pipeline-level options like timeout or retry.
+- `stages` and steps: Define the execution flow.
+- `post`: Define post-build actions like sending notifications.
+- `parameters`: Accept input from users (e.g., string or boolean).
+- `tools`: Define tools like JDK, Maven, or Node.js.
